@@ -14,4 +14,9 @@ var firebaseConfig = {
 
   var database = firebase.database();
 
-  
+//   Clock
+var currentHour = moment().hour();
+var currentMinutes = moment().minutes();
+var currentTime = moment(currentHour + ":" + currentMinutes, "HH:mm");
+$(".clock").text(currentTime.format("h:mm a"));
+

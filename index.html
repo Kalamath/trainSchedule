@@ -6,13 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate&display=swap" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,7 +25,19 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+
     <title>Train Scheduler</title>
+
+    <style>
+        body {
+            background-image: url('assets/images/train.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 
 </head>
 
@@ -29,22 +45,21 @@
 
     <div class="container">
         <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1 class="text-center">Train Tripper</h1>
-            <section class="clock">
-                <h2 class="text-center clockTitle">Current Time</h2>
-                <div class="text-center currentTime">00:00</div>
+        <div class="jumbotron bg-transparent">
+            <h1 class="text-center mainTitle">Train Tripper</h1>
+            <section class="time">
+                <!-- <h2 class="text-center clockTitle">Current Time</h2> -->
+                <div id="clock" class="text-center clock">loading ...</div>
             </section>
         </div>
 
-        <section class="trainSchedule container-fluid">
+        <section class="trainSchedule container-fluid ">
             <div class="row">
                 <div class="col-1"></div>
                 <table class="col-10" id="timeTable">
                     <tr class="tableTitle">
                         <th class="tableTitle">Train Name</th>
                         <th class="tableTitle ">Destination</th>
-                        <th class="tableTitle ">First Train of the Day</th>
                         <th class="tableTitle ">Frequency (Min)</th>
                         <th class="tableTitle ">Next Arrival</th>
                         <th class="tableTitle ">Minutes Away</th>
@@ -54,13 +69,15 @@
             </div>
         </section>
 
+        <br>
+
         <div class="card mb-12 shadow-sm">
             <div class="card-header">
                 <h5 class="my-0 font-weight-normal">
-                    Add Employee
+                    Scheduler
                 </h5>
             </div>
-            <div class="card-body">
+            <div class="card-body bg-transparent">
                 <div class="form-group">
                     <label for="name-input">Train Name:</label>
                     <input type="text" class="form-control" id="name-input" placeholder="Bat Train">
