@@ -20,3 +20,7 @@ var currentMinutes = moment().minutes();
 var currentTime = moment(currentHour + ":" + currentMinutes, "HH:mm");
 $(".clock").text(currentTime.format("h:mm a"));
 
+$("#addTrain").on("click", function(event) {
+  
+  event.preventDefault(); 
+})

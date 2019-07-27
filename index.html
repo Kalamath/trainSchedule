@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/miniclock.png">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
@@ -53,10 +56,12 @@
             </section>
         </div>
 
-        <section class="trainSchedule container-fluid ">
-            <div class="row">
-                <div class="col-1"></div>
-                <table class="col-10" id="timeTable">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Your Train Schedule</strong></h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover" id="timeTable">
                     <tr class="tableTitle">
                         <th class="tableTitle">Train Name</th>
                         <th class="tableTitle ">Destination</th>
@@ -65,9 +70,8 @@
                         <th class="tableTitle ">Minutes Away</th>
                     </tr>
                 </table>
-                <div class="col-1"></div>
             </div>
-        </section>
+        </div>
 
         <br>
 
@@ -79,22 +83,22 @@
             </div>
             <div class="card-body bg-transparent">
                 <div class="form-group">
-                    <label for="name-input">Train Name:</label>
-                    <input type="text" class="form-control" id="name-input" placeholder="Bat Train">
+                    <label for="train-name">Train Name:</label>
+                    <input type="text" class="form-control" id="train-name" placeholder="Bat Train">
                 </div>
                 <div class="form-group">
-                    <label for="role-input">Destination:</label>
-                    <input type="text" class="form-control" id="role-input" placeholder="Gotham City">
+                    <label for="destination">Destination:</label>
+                    <input type="text" class="form-control" id="destination" placeholder="Gotham City">
                 </div>
                 <div class="form-group">
-                    <label for="role-input">First Train Time (Military Time):</label>
-                    <input type="text" class="form-control" id="role-input" placeholder="13:00">
+                    <label for="first-train">First Train Time (Military Time):</label>
+                    <input type="text" class="form-control" id="first-train" placeholder="13:00">
                 </div>
                 <div class="form-group">
-                    <label for="role-input">Frequency:</label>
-                    <input type="text" class="form-control" id="role-input" placeholder="In Minutes">
+                    <label for="frequency">Frequency (Min):</label>
+                    <input type="text" class="form-control" id="frequency" placeholder="In Minutes">
                 </div>
-                <button id="add-user" type="submit" class="btn btn-primary" value="Submit">Submit</button>
+                <button id="addTrain" type="submit" class="btn btn-primary" value="Submit">Submit</button>
             </div>
         </div>
     </div>
