@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="assets/images/miniclock.png">
 
@@ -40,6 +40,17 @@
             background-attachment: fixed;
             background-size: cover;
         }
+        
+        .mainSchedule {
+            font-family: 'Fascinate', cursive;
+        }
+        
+        .scheduler {
+            background-image: url('assets/images/pink_rice.png');
+            border-radius: 15px;
+            box-shadow: 0 0 7px #222;
+            font-family: 'Fascinate', cursive;
+        }
     </style>
 
 </head>
@@ -56,7 +67,7 @@
             </section>
         </div>
 
-        <div class="panel panel-primary">
+        <div class="panel panel-primary mainSchedule text-center">
             <div class="panel-heading">
                 <h3 class="panel-title"><strong>Your Train Schedule</strong></h3>
             </div>
@@ -75,33 +86,39 @@
 
         <br>
 
-        <div class="card mb-12 shadow-sm">
-            <div class="card-header">
-                <h5 class="my-0 font-weight-normal">
-                    Scheduler
-                </h5>
+        <div class="panel panel-primary scheduler" style="">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Add Train</strong></h3>
             </div>
-            <div class="card-body bg-transparent">
-                <div class="form-group">
-                    <label for="train-name">Train Name:</label>
-                    <input type="text" class="form-control" id="train-name" placeholder="Bat Train">
-                </div>
-                <div class="form-group">
-                    <label for="destination">Destination:</label>
-                    <input type="text" class="form-control" id="destination" placeholder="Gotham City">
-                </div>
-                <div class="form-group">
-                    <label for="first-train">First Train Time (Military Time):</label>
-                    <input type="text" class="form-control" id="first-train" placeholder="13:00">
-                </div>
-                <div class="form-group">
-                    <label for="frequency">Frequency (Min):</label>
-                    <input type="text" class="form-control" id="frequency" placeholder="In Minutes">
-                </div>
-                <button id="addTrain" type="submit" class="btn btn-primary" value="Submit">Submit</button>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="train-name">Train Name:</label>
+                        <input type="text" class="form-control" id="train-name" placeholder="Bat Train">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination:</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Gotham City">
+                    </div>
+                    <div class="form-group">
+                        <label for="first-train">First Train Time (Military Time):</label>
+                        <input type="text" class="form-control" id="first-train" placeholder="13:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (Min):</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="In Minutes">
+                    </div>
+                    <button id="addTrain" type="submit" class="btn btn-primary" value="Submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
+    <div class="footer">
+        <a href="index.html" class="footer">
+          Train Tripper
+      </a>
+    </div>
+
 
     <script src="assets/js/main.js"></script>
     <!-- <script src="assets/javascript/firebase.js"></script> -->

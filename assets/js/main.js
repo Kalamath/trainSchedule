@@ -17,10 +17,23 @@ var firebaseConfig = {
 //   Clock
 var currentHour = moment().hour();
 var currentMinutes = moment().minutes();
-var currentTime = moment(currentHour + ":" + currentMinutes, "HH:mm");
-$(".clock").text(currentTime.format("h:mm a"));
+var currentSeconds = moment().seconds();
+var currentTime = moment(currentHour + ":" + currentMinutes + ":" + currentSeconds, "HH:mm:ss");
+$(".clock").text(currentTime.format("h:mm:ss a"));
 
 $("#addTrain").on("click", function(event) {
   
   event.preventDefault(); 
 })
+
+// function updateTime(){
+//   var losAngeles = moment.tz("America/Los_Angeles").format('HH:mm a');
+//  $('.clock').html(currentTime.format("h:mm:ss a"));
+// };
+
+// moment.tz.add('America/Los_Angeles|PST PDT|80 70|0101|1Lz50 1zb0 Op0');                                                                         
+
+// updateTime();
+// setInterval(function(){
+//  updateTime();
+// },60000);

@@ -1,7 +1,7 @@
 .clock {
     /* height: 100px; */
     /* width: 70%; */
-    line-height: 100px;  
+    line-height: 100px;
     margin: auto 0;
     /* padding: 0 50px; */
     /* background: #222; */
@@ -12,11 +12,27 @@
     text-shadow: 0 0 6px #000;
     font-family: 'Indie Flower', cursive;
     font-size: 80px;
-  }
+}
 
-  .mainTitle {
+.mainSchedule {
+    color: white;
+    text-shadow: 0 0 10px #000;
+}
+
+.mainTitle {
     color: pink;
-    text-shadow: 0 0 10px #000;   
+    text-shadow: 0 0 10px #000;
     font-family: 'Fascinate', cursive;
     font-size: 100px;
-  }
+}
+
+.footer {
+    background: aqua;
+    border-radius: 1px;
+    color: pink;
+    font-family: 'Fascinate', cursive;
+    font-size: 30px;
+    /* position: fixed; */
+    margin: 50px 0px 0px 0px;
+    text-shadow: 0 0 10px #000;
+}
