@@ -8,32 +8,31 @@ var firebaseConfig = {
     storageBucket: "",
     messagingSenderId: "568587410686",
     appId: "1:568587410686:web:38a6ac40b6d1a074"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-  var database = firebase.database();
+var database = firebase.database();
 
 //   Clock
-var currentHour = moment().hour();
-var currentMinutes = moment().minutes();
-var currentSeconds = moment().seconds();
-var currentTime = moment(currentHour + ":" + currentMinutes + ":" + currentSeconds, "HH:mm:ss");
-$(".clock").text(currentTime.format("h:mm:ss a"));
+var myTimer = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    $(".clock").text(d.toLocaleTimeString());
+}
+
+// Add New Train
+var frequency = 0;
+var firstTrain = 0;
 
 $("#addTrain").on("click", function(event) {
-  
-  event.preventDefault(); 
+    event.preventDefault();
+
+    var trainName = $("#train-name").val().trim();
+    var destination = $("#destination").val().trim();
+    firstTrain = moment($("#first-train").val().trim(), "HH:mm").format("HH:mm");
+    frequency = parseInt($("#frequency").val().trim());
+    console.log(firstTrain);
+
 })
-
-// function updateTime(){
-//   var losAngeles = moment.tz("America/Los_Angeles").format('HH:mm a');
-//  $('.clock').html(currentTime.format("h:mm:ss a"));
-// };
-
-// moment.tz.add('America/Los_Angeles|PST PDT|80 70|0101|1Lz50 1zb0 Op0');                                                                         
-
-// updateTime();
-// setInterval(function(){
-//  updateTime();
-// },60000);
