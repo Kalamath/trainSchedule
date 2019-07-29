@@ -15,8 +15,10 @@
 }
 
 .mainSchedule {
-    color: white;
-    text-shadow: 0 0 10px #000;
+    background: rgb(239, 187, 204, 0.459);
+    color: black;
+    text-shadow: 0 0 10px #fff;
+    border-radius: 15px;
 }
 
 .mainTitle {
@@ -41,4 +43,8 @@
 
 .scheduler {
     padding: 8px;
+    background-image: url('assets/images/pink_rice.png');
+    border-radius: 15px;
+    box-shadow: 0 0 7px #222;
+    font-family: 'Fascinate', cursive;
 }
