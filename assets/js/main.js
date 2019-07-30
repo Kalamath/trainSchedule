@@ -1,13 +1,13 @@
 // Firebase JS
 
 var firebaseConfig = {
-    apiKey: "AIzaSyDjA2Lp4Qga0i6vs4xUH4-1tCm-nwOYgIk",
-    authDomain: "fullstackclass-15e91.firebaseapp.com",
-    databaseURL: "https://fullstackclass-15e91.firebaseio.com",
-    projectId: "fullstackclass-15e91",
-    storageBucket: "",
-    messagingSenderId: "568587410686",
-    appId: "1:568587410686:web:38a6ac40b6d1a074"
+    apiKey: "AIzaSyCug1_WbJw485SHyKAPUj9n3kqHF5S1M6c",
+    authDomain: "thisisatest-3421c.firebaseapp.com",
+    databaseURL: "https://thisisatest-3421c.firebaseio.com",
+    projectId: "thisisatest-3421c",
+    storageBucket: "thisisatest-3421c.appspot.com",
+    messagingSenderId: "1017165791166",
+    appId: "1:1017165791166:web:972993977ede630a"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
